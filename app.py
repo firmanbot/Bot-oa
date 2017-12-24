@@ -307,7 +307,7 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=content))
         return 0
-    if event.message.text == "PTT 表特版 近期大於 10 推的文章":
+    if event.message.text == "anu":
         content = ptt_beauty()
         line_bot_api.reply_message(
             event.reply_token,
