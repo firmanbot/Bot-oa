@@ -467,6 +467,12 @@ def handle_message(event):
             alt_text='Rules Grup Evolved Rangers',
             base_size=BaseSize(height=1040, width=1040),
             actions=[
+                URIImagemapAction(
+                    link_uri='https://moh--erbil.blogspot.co.id/',
+                    area=ImagemapArea(
+                        x=0, y=0, width=520, height=1040
+                    )
+                ),
                 MessageImagemapAction(
                     text='Dibaca ya bukan di klik gambarnya',
                     area=ImagemapArea(
