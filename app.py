@@ -310,6 +310,10 @@ def handle_message(event):
                     MessageTemplateAction(
                         label='Pengurus',
                         text='Pengurus'
+                    ),
+                    MessageTemplateAction(
+                        label='App clone',
+                        text='App clone'
                     )
                 ]
             )
