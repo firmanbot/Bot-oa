@@ -334,7 +334,7 @@ def handle_message(event):
         return 0
     if event.message.text == "App clone":
         imagemap_message = ImagemapSendMessage(
-            base_url='https://imgur.com/uJFKjcs.jpg',
+            base_url='https://imgur.com/Hbv4GWl.jpg',
             alt_text='App clone',
             base_size=BaseSize(height=1040, width=1040),
             actions=[
