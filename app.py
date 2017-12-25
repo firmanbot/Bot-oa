@@ -327,15 +327,15 @@ def handle_message(event):
                     URITemplateAction(
                         label='Parallel Space',
                         uri='https://play.google.com/store/apps/details?id=com.lbe.parallel.intl'
-                    )
+                    ),
                     URITemplateAction(
                         label='APP Cloner',
                         uri='https://play.google.com/store/apps/details?id=com.applisto.appcloner'
-                    )
+                    ),
                     URITemplateAction(
                         label='2Accounts',
                         uri='https://play.google.com/store/apps/details?id=com.excelliance.multiaccount'
-                    )
+                    ),
                     URITemplateAction(
                         label='Multi clone',
                         uri='https://play.google.com/store/apps/details?id=com.jumobile.multiapp'
