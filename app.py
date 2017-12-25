@@ -310,10 +310,6 @@ def handle_message(event):
                     MessageTemplateAction(
                         label='Pengurus',
                         text='Pengurus'
-                    ),
-                    MessageTemplateAction(
-                        label='App clone',
-                        text='App clone'
                     )
                 ]
             )
@@ -330,40 +326,6 @@ def handle_message(event):
                     text='Dibaca ya bukan di klik gambarnya',
                     area=ImagemapArea(
                         x=1, y=0, width=10, height=10
-                    )
-                )
-            ]
-        )
-        line_bot_api.reply_message(event.reply_token, imagemap_message)
-        return 0
-    if event.message.text == "App clone":
-        imagemap_message = ImagemapSendMessage(
-            base_url='https://imgur.com/Hbv4GWl.jpg',
-            alt_text='App clone',
-            base_size=BaseSize(height=1040, width=1040),
-            actions=[
-                URIImagemapAction(
-                    link_uri='https://play.google.com/store/apps/details?id=com.excelliance.multiaccount',
-                    area=ImagemapArea(
-                        x=520, y=520, width=520, height=520
-                    )
-                )
-                URIImagemapAction(
-                    link_uri='https://play.google.com/store/apps/details?id=com.applisto.appcloner',
-                    area=ImagemapArea(
-                        x=520, y=1040, width=520, height=520
-                    )
-                )
-                URIImagemapAction(
-                    link_uri='hhttps://play.google.com/store/apps/details?id=com.lbe.parallel.intl',
-                    area=ImagemapArea(
-                        x=1040, y=520, width=520, height=520
-                    )
-                )
-                URIImagemapAction(
-                    link_uri='https://play.google.com/store/apps/details?id=com.jumobile.multiapp',
-                    area=ImagemapArea(
-                        x=1040, y=1040, width=520, height=520
                     )
                 )
             ]
