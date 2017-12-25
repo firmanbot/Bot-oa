@@ -316,6 +316,35 @@ def handle_message(event):
         )
         line_bot_api.reply_message(event.reply_token, buttons_template)
         return 0
+    if event.message.text == "App clone":
+        buttons_template = TemplateSendMessage(
+            alt_text='App clone',
+            template=ButtonsTemplate(
+                title='Aplikasi clone',
+                text='Klik salah satu menu dibawah ini.',
+                thumbnail_image_url='https://imgur.com/Hbv4GWl.jpg',
+                actions=[
+                    URITemplateAction(
+                        label='Parallel Space',
+                        uri='https://play.google.com/store/apps/details?id=com.lbe.parallel.intl'
+                    )
+                    URITemplateAction(
+                        label='APP Cloner',
+                        uri='https://play.google.com/store/apps/details?id=com.applisto.appcloner'
+                    )
+                    URITemplateAction(
+                        label='2Accounts',
+                        uri='https://play.google.com/store/apps/details?id=com.excelliance.multiaccount'
+                    )
+                    URITemplateAction(
+                        label='Multi clone',
+                        uri='https://play.google.com/store/apps/details?id=com.jumobile.multiapp'
+                    )
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token, buttons_template)
+        return 0
     if event.message.text == "Rules":
         imagemap_message = ImagemapSendMessage(
             base_url='https://imgur.com/uJFKjcs.jpg',
