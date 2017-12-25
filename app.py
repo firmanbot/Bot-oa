@@ -316,10 +316,6 @@ def handle_message(event):
                             URITemplateAction(
                                 label='Data Member',
                                 uri='https://docs.google.com/spreadsheets/d/1ocqbpQHl65WbpSGHRxpYyciwa0S8UrOqMrKr3zw1FX4'
-                            ),
-                            MessageTemplateAction(
-                                label='About',
-                                text='About'
                             )
                         ]
                     ),
@@ -335,10 +331,6 @@ def handle_message(event):
                             MessageTemplateAction(
                                 label='Advent Stage',
                                 text='Advent Stage'
-                            ),
-                            MessageTemplateAction(
-                                label='Guild',
-                                text='Guild'
                             ),
                             MessageTemplateAction(
                                 label='Next Page',
