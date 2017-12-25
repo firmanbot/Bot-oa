@@ -520,9 +520,9 @@ def handle_message(event):
                     label='開始玩',
                     text='開始玩'
                 ),
-                URITemplateAction(
-                    label='影片介紹 阿肥bot',
-                    uri='https://youtu.be/1IxtWgWxtlE'
+                MessageTemplateAction(
+                    label='Rules',
+                    text='Rules'
                 ),
                 URITemplateAction(
                     label='如何建立自己的 Line Bot',
