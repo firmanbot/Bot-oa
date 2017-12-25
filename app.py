@@ -295,21 +295,92 @@ def panx():
 def handle_message(event):
     print("event.reply_token:", event.reply_token)
     print("event.message.text:", event.message.text)
-    if event.message.text == "Keyword":
+    if event.message.text == "Keyword":    
+        carousel_template_message = TemplateSendMessage(
+            alt_text='Keyword Grup モの Rangers',
+            template=CarouselTemplate(
+                columns=[
+                    CarouselColumn(
+                        thumbnail_image_url='https://imgur.com/qXBF4Xi.jpg',
+                        title='モの keyword :',
+                        text='Keyword seputar grup モの Rangers',
+                        actions=[
+                            MessageTemplateAction(
+                                label='Rules',
+                                text='Rules'
+                            ),
+                            MessageTemplateAction(
+                                label='Pengurus',
+                                text='Pengurus'
+                            ),
+                            URITemplateAction(
+                                label='Data Member',
+                                uri='https://docs.google.com/spreadsheets/d/1ocqbpQHl65WbpSGHRxpYyciwa0S8UrOqMrKr3zw1FX4'
+                            ),
+                            MessageTemplateAction(
+                                label='About',
+                                text='About'
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://imgur.com/czohXnH.jpg',
+                        title='About Line Rangers (Page 1)',
+                        text='Info Line Rangers.',
+                        actions=[
+                            MessageTemplateAction(
+                                label='Dtbs Rangers',
+                                text='Dtbs Rangers'
+                            ),
+                            MessageTemplateAction(
+                                label='Advent Stage',
+                                text='Advent Stage'
+                            ),
+                            MessageTemplateAction(
+                                label='Guild',
+                                text='Guild'
+                            ),
+                            MessageTemplateAction(
+                                label='Next Page',
+                                text='Next Rgr'
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://imgur.com/vpnKDDJ.jpg',
+                        title='Tool :',
+                        text='Apk yang disarankan bagi anda.',
+                        actions=[
+                            MessageTemplateAction(
+                                label='Apk Clone',
+                                text='App clone'
+                            ),
+                            MessageTemplateAction(
+                                label='Screen Recorder',
+                                text='Screen Recorder'
+                            )
+                        ]
+                    )
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token, carousel_template_message)
+        return 0
+    if event.message.text == "Next Rgr":
         buttons_template = TemplateSendMessage(
-            alt_text='Keyword Grup Evolved Rangers',
+            alt_text='About Rangers',
             template=ButtonsTemplate(
-                title='Keyword Grup Evolved Rangers',
-                text='Klik salah satu menu dibawah ini.',
-                thumbnail_image_url='https://imgur.com/qXBF4Xi.jpg',
+                title='About Line Rangers (Page 2)',
+                text='Keyword ini akan menampilkan seputar Line Rangers.',
+                thumbnail_image_url='https://imgur.com/czohXnH.jpg',
                 actions=[
                     MessageTemplateAction(
-                        label='Rules',
-                        text='Rules'
+                        label='Leonard point',
+                        text='LP'
                     ),
                     MessageTemplateAction(
-                        label='Pengurus',
-                        text='Pengurus'
+                        label='Gears',
+                        text='Gears'
                     )
                 ]
             )
@@ -349,6 +420,38 @@ def handle_message(event):
         imagemap_message = ImagemapSendMessage(
             base_url='https://imgur.com/uJFKjcs.jpg',
             alt_text='Rules Grup Evolved Rangers',
+            base_size=BaseSize(height=1040, width=1040),
+            actions=[
+                MessageImagemapAction(
+                    text='Dibaca ya bukan di klik gambarnya',
+                    area=ImagemapArea(
+                        x=1, y=0, width=10, height=10
+                    )
+                )
+            ]
+        )
+        line_bot_api.reply_message(event.reply_token, imagemap_message)
+        return 0
+    if event.message.text == "Sep 17":
+        imagemap_message = ImagemapSendMessage(
+            base_url='https://imgur.com/nsdrTRo.jpg',
+            alt_text='Rangers Update September 2017',
+            base_size=BaseSize(height=1040, width=1040),
+            actions=[
+                MessageImagemapAction(
+                    text='Dibaca ya bukan di klik gambarnya',
+                    area=ImagemapArea(
+                        x=1, y=0, width=10, height=10
+                    )
+                )
+            ]
+        )
+        line_bot_api.reply_message(event.reply_token, imagemap_message)
+        return 0
+    if event.message.text == "Sep 16":
+        imagemap_message = ImagemapSendMessage(
+            base_url='https://imgur.com/tnfYdLa.jpg',
+            alt_text='Rangers Update September 2016',
             base_size=BaseSize(height=1040, width=1040),
             actions=[
                 MessageImagemapAction(
