@@ -295,166 +295,21 @@ def panx():
 def handle_message(event):
     print("event.reply_token:", event.reply_token)
     print("event.message.text:", event.message.text)
-    if event.message.text == "eyny":
-        content = eyny_movie()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    if event.message.text == "蘋果即時新聞":
-        content = apple_news()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    if event.message.text == "anu":
-        content = ptt_beauty()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    if event.message.text == "來張 imgur 正妹圖片":
-        client = ImgurClient(client_id, client_secret)
-        images = client.get_album_images(album_id)
-        index = random.randint(0, len(images) - 1)
-        url = images[index].link
-        image_message = ImageSendMessage(
-            original_content_url=url,
-            preview_image_url=url
-        )
-        line_bot_api.reply_message(
-            event.reply_token, image_message)
-        return 0
-    if event.message.text == "隨便來張正妹圖片":
-        image = requests.get(API_Get_Image)
-        url = image.json().get('Url')
-        image_message = ImageSendMessage(
-            original_content_url=url,
-            preview_image_url=url
-        )
-        line_bot_api.reply_message(
-            event.reply_token, image_message)
-        return 0
-    if event.message.text == "近期熱門廢文":
-        content = ptt_hot()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    if event.message.text == "即時廢文":
-        content = ptt_gossiping()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    if event.message.text == "近期上映電影":
-        content = movie()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    if event.message.text == "科技新報":
-        content = technews()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    if event.message.text == "PanX泛科技":
-        content = panx()
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=content))
-        return 0
-    if event.message.text == "開始玩":
+    if event.message.text == "Keyword":
         buttons_template = TemplateSendMessage(
-            alt_text='開始玩 template',
+            alt_text='Keyword Grup Evolved Rangers',
             template=ButtonsTemplate(
-                title='選擇服務',
-                text='請選擇',
-                thumbnail_image_url='https://i.imgur.com/xQF5dZT.jpg',
+                title='Keyword Grup Evolved Rangers',
+                text='Klik salah satu menu dibawah ini.',
+                thumbnail_image_url='https://imgur.com/qXBF4Xi.jpg',
                 actions=[
                     MessageTemplateAction(
-                        label='新聞',
-                        text='新聞'
+                        label='Rules',
+                        text='Rules'
                     ),
                     MessageTemplateAction(
-                        label='電影',
-                        text='電影'
-                    ),
-                    MessageTemplateAction(
-                        label='看廢文',
-                        text='看廢文'
-                    ),
-                    MessageTemplateAction(
-                        label='正妹',
-                        text='正妹'
-                    )
-                ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token, buttons_template)
-        return 0
-    if event.message.text == "新聞":
-        buttons_template = TemplateSendMessage(
-            alt_text='新聞 template',
-            template=ButtonsTemplate(
-                title='新聞類型',
-                text='請選擇',
-                thumbnail_image_url='https://i.imgur.com/vkqbLnz.png',
-                actions=[
-                    MessageTemplateAction(
-                        label='蘋果即時新聞',
-                        text='蘋果即時新聞'
-                    ),
-                    MessageTemplateAction(
-                        label='科技新報',
-                        text='科技新報'
-                    ),
-                    MessageTemplateAction(
-                        label='PanX泛科技',
-                        text='PanX泛科技'
-                    )
-                ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token, buttons_template)
-        return 0
-    if event.message.text == "電影":
-        buttons_template = TemplateSendMessage(
-            alt_text='電影 template',
-            template=ButtonsTemplate(
-                title='服務類型',
-                text='請選擇',
-                thumbnail_image_url='https://i.imgur.com/sbOTJt4.png',
-                actions=[
-                    MessageTemplateAction(
-                        label='近期上映電影',
-                        text='近期上映電影'
-                    ),
-                    MessageTemplateAction(
-                        label='eyny',
-                        text='eyny'
-                    )
-                ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token, buttons_template)
-        return 0
-    if event.message.text == "看廢文":
-        buttons_template = TemplateSendMessage(
-            alt_text='看廢文 template',
-            template=ButtonsTemplate(
-                title='你媽知道你在看廢文嗎',
-                text='請選擇',
-                thumbnail_image_url='https://i.imgur.com/ocmxAdS.jpg',
-                actions=[
-                    MessageTemplateAction(
-                        label='近期熱門廢文',
-                        text='近期熱門廢文'
-                    ),
-                    MessageTemplateAction(
-                        label='即時廢文',
-                        text='即時廢文'
+                        label='Pengurus',
+                        text='Pengurus'
                     )
                 ]
             )
@@ -467,12 +322,6 @@ def handle_message(event):
             alt_text='Rules Grup Evolved Rangers',
             base_size=BaseSize(height=1040, width=1040),
             actions=[
-                URIImagemapAction(
-                    link_uri='https://moh--erbil.blogspot.co.id/',
-                    area=ImagemapArea(
-                        x=0, y=0, width=520, height=1040
-                    )
-                ),
                 MessageImagemapAction(
                     text='Dibaca ya bukan di klik gambarnya',
                     area=ImagemapArea(
