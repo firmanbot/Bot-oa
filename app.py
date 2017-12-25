@@ -463,7 +463,7 @@ def handle_message(event):
         return 0
     if event.message.text == "Rules":
         imagemap_message = ImagemapSendMessage(
-            base_url='https://i.imgur.com/qKkE2bj.jpg',
+            base_url='https://imgur.com/uJFKjcs.jpg',
             alt_text='Rules Grup Evolved Rangers',
             base_size=BaseSize(height=1040, width=1040),
             actions=[
