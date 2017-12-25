@@ -332,6 +332,22 @@ def handle_message(event):
         )
         line_bot_api.reply_message(event.reply_token, imagemap_message)
         return 0
+    if event.message.text == "Pengurus":
+        imagemap_message = ImagemapSendMessage(
+            base_url='https://imgur.com/4Kn4DKS.jpg',
+            alt_text='Rules Grup Evolved Rangers',
+            base_size=BaseSize(height=1040, width=1040),
+            actions=[
+                MessageImagemapAction(
+                    text='Dibaca ya bukan di klik gambarnya',
+                    area=ImagemapArea(
+                        x=520, y=0, width=520, height=1040
+                    )
+                )
+            ]
+        )
+        line_bot_api.reply_message(event.reply_token, imagemap_message)
+        return 0
     if event.message.text == "正妹":
         buttons_template = TemplateSendMessage(
             alt_text='正妹 template',
