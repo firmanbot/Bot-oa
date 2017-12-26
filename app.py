@@ -56,36 +56,58 @@ def handle_message(event):
                 columns=[
                     CarouselColumn(
                         thumbnail_image_url='https://imgur.com/qXBF4Xi.jpg',
-                        title='モの keyword',
+                        title='モの keyword :',
                         text='Keyword seputar grup モの Rangers',
                         actions=[
                             MessageTemplateAction(
                                 label='Rules',
                                 text='Rules'
                             ),
+                            MessageTemplateAction(
+                                label='Pengurus',
+                                text='Pengurus'
+                            ),
                             URITemplateAction(
                                 label='Data Member',
-                                 uri='https://docs.google.com/spreadsheets/d/1ocqbpQHl65WbpSGHRxpYyciwa0S8UrOqMrKr3zw1FX4'
+                                uri='https://docs.google.com/spreadsheets/d/1ocqbpQHl65WbpSGHRxpYyciwa0S8UrOqMrKr3zw1FX4'
                             )
                         ]
                     ),
                     CarouselColumn(
                         thumbnail_image_url='https://imgur.com/czohXnH.jpg',
-                        title='this is menu2',
-                        text='description2',
+                        title='About Line Rangers (Page 1)',
+                        text='Info Line Rangers.',
                         actions=[
-                            PostbackTemplateAction(
-                                label='postback2',
-                                text='postback text2',
-                                data='action=buy&itemid=2'
+                            MessageTemplateAction(
+                                label='Dtbs Rangers',
+                                text='Dtbs Rangers'
                             ),
                             MessageTemplateAction(
-                                label='message2',
-                                text='message text2'
+                                label='Advent Stage',
+                                text='Advent Stage'
                             ),
-                            URITemplateAction(
-                                label='uri2',
-                                uri='https://developers.line.me'
+                            MessageTemplateAction(
+                                label='Next Page',
+                                text='Next Rgr'
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://imgur.com/vpnKDDJ.jpg',
+                        title='Tool :',
+                        text='Apk yang disarankan bagi anda.',
+                        actions=[
+                            MessageTemplateAction(
+                                label='Apk Clone',
+                                text='App clone'
+                            ),
+                            MessageTemplateAction(
+                                label='Screen Recorder',
+                                text='Screen Recorder'
+                            ),
+                            MessageTemplateAction(
+                                label='Lainnya',
+                                text='Lainnya'
                             )
                         ]
                     )
