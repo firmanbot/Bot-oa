@@ -51,59 +51,46 @@ def handle_message(event):
     print("event.message.text:", event.message.text)
     if event.message.text == "Keyword":    
         carousel_template_message = TemplateSendMessage(
-            alt_text='Keyword Grup モの Rangers',
+            alt_text='Carousel template',
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
                         thumbnail_image_url='https://imgur.com/qXBF4Xi.jpg',
-                        title='モの keyword :',
-                        text='Keyword seputar grup モの Rangers',
+                        title='this is menu1',
+                        text='description1',
                         actions=[
-                            MessageTemplateAction(
-                                label='Rules',
-                                text='Rules'
+                            PostbackTemplateAction(
+                                label='postback1',
+                                text='postback text1',
+                                data='action=buy&itemid=1'
                             ),
                             MessageTemplateAction(
-                                label='Pengurus',
-                                text='Pengurus'
+                                label='message1',
+                                text='message text1'
                             ),
                             URITemplateAction(
-                                label='Data Member',
-                                uri='https://docs.google.com/spreadsheets/d/1ocqbpQHl65WbpSGHRxpYyciwa0S8UrOqMrKr3zw1FX4'
+                                label='uri1',
+                                 uri='https://developers.line.me'
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://imgur.com/czohXnH.jpg',
-                        title='About Line Rangers (Page 1)',
-                        text='Info Line Rangers.',
+                        thumbnail_image_url='https://imgur.com/qXBF4Xi.jpg',
+                        title='this is menu2',
+                        text='description2',
                         actions=[
-                            MessageTemplateAction(
-                                label='Dtbs Rangers',
-                                text='Dtbs Rangers'
+                            PostbackTemplateAction(
+                                label='postback2',
+                                text='postback text2',
+                                data='action=buy&itemid=2'
                             ),
                             MessageTemplateAction(
-                                label='Advent Stage',
-                                text='Advent Stage'
+                                label='message2',
+                                text='message text2'
                             ),
-                            MessageTemplateAction(
-                                label='Next Page',
-                                text='Next Rgr'
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://imgur.com/vpnKDDJ.jpg',
-                        title='Tool',
-                        text='Apk yang disarankan bagi anda.',
-                        actions=[
-                            MessageTemplateAction(
-                                label='Apk Clone',
-                                text='App clone'
-                            ),
-                            MessageTemplateAction(
-                                label='Screen Recorder',
-                                text='Screen Recorder'
+                            URITemplateAction(
+                                label='uri2',
+                                uri='https://developers.line.me'
                             )
                         ]
                     )
