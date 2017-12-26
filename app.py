@@ -49,6 +49,22 @@ def callback():
 def handle_message(event):
     print("event.reply_token:", event.reply_token)
     print("event.message.text:", event.message.text)
+    if event.message.text == "Advent Stage":
+        text_message = TextSendMessage(text='Coming soon')
+        line_bot_api.reply_message(event.reply_token, text_message)
+        return 0
+    if event.message.text == "Dtbs Rangers":
+        text_message = TextSendMessage(text='Coming soon')
+        line_bot_api.reply_message(event.reply_token, text_message)
+        return 0
+    if event.message.text == "Screen Recorder":
+        text_message = TextSendMessage(text='Coming soon')
+        line_bot_api.reply_message(event.reply_token, text_message)
+        return 0
+    if event.message.text == "Emulator Android PC":
+        text_message = TextSendMessage(text='Coming soon')
+        line_bot_api.reply_message(event.reply_token, text_message)
+        return 0
     if event.message.text == "Keyword":    
         carousel_template_message = TemplateSendMessage(
             alt_text='Keyword Grup モの Rangers',
@@ -106,8 +122,8 @@ def handle_message(event):
                                 text='Screen Recorder'
                             ),
                             MessageTemplateAction(
-                                label='Lainnya',
-                                text='Lainnya'
+                                label='Emulator Android PC',
+                                text='Emulator Android PC'
                             )
                         ]
                     )
@@ -130,7 +146,7 @@ def handle_message(event):
                     ),
                     URITemplateAction(
                         label='Gear ATK Range',
-                        uri='http://eo.moherbil.com/index.php?p=gears_free'
+                        uri='http://eo.moherbil.com/index.php?p=gears_atkrange'
                     ),
                     URITemplateAction(
                         label='Gear Spam',
