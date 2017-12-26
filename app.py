@@ -116,6 +116,35 @@ def handle_message(event):
         )
         line_bot_api.reply_message(event.reply_token, carousel_template_message)
         return 0
+    if event.message.text == "Gears":
+        buttons_template = TemplateSendMessage(
+            alt_text='Gears Info',
+            template=ButtonsTemplate(
+                title='Gears Info',
+                text='Klik salah satu menu dibawah ini.',
+                thumbnail_image_url='https://imgur.com/U0jPa2S.jpg',
+                actions=[
+                    URITemplateAction(
+                        label='Gear Free/PVP/RAID',
+                        uri='http://eo.moherbil.com/index.php?p=gears_free'
+                    ),
+                    URITemplateAction(
+                        label='Gear ATK Range',
+                        uri='http://eo.moherbil.com/index.php?p=gears_free'
+                    ),
+                    URITemplateAction(
+                        label='Gear Spam',
+                        uri='http://eo.moherbil.com/index.php?p=gears_spam'
+                    ),
+                    URITemplateAction(
+                        label='Gear Megaman',
+                        uri='http://eo.moherbil.com/index.php?p=gears_ro'
+                    )
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token, buttons_template)
+        return 0
     if event.message.text == "Next Rgr":
         buttons_template = TemplateSendMessage(
             alt_text='About Rangers',
@@ -124,9 +153,9 @@ def handle_message(event):
                 text='Keyword ini akan menampilkan seputar Line Rangers.',
                 thumbnail_image_url='https://imgur.com/czohXnH.jpg',
                 actions=[
-                    MessageTemplateAction(
-                        label='Leonard point',
-                        text='LP'
+                    URITemplateAction(
+                        label='Farm Leonard Point',
+                        uri='https://docs.google.com/spreadsheets/d/1ocqbpQHl65WbpSGHRxpYyciwa0S8UrOqMrKr3zw1FX4'
                     ),
                     MessageTemplateAction(
                         label='Gears',
