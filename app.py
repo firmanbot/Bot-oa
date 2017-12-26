@@ -51,31 +51,26 @@ def handle_message(event):
     print("event.message.text:", event.message.text)
     if event.message.text == "Keyword":    
         carousel_template_message = TemplateSendMessage(
-            alt_text='Carousel template',
+            alt_text='Keyword Grup モの Rangers',
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
                         thumbnail_image_url='https://imgur.com/qXBF4Xi.jpg',
-                        title='this is menu1',
-                        text='description1',
+                        title='モの keyword',
+                        text='Keyword seputar grup モの Rangers',
                         actions=[
-                            PostbackTemplateAction(
-                                label='postback1',
-                                text='postback text1',
-                                data='action=buy&itemid=1'
-                            ),
                             MessageTemplateAction(
-                                label='message1',
-                                text='message text1'
+                                label='Rules',
+                                text='Rules'
                             ),
                             URITemplateAction(
-                                label='uri1',
-                                 uri='https://developers.line.me'
+                                label='Data Member',
+                                 uri='https://docs.google.com/spreadsheets/d/1ocqbpQHl65WbpSGHRxpYyciwa0S8UrOqMrKr3zw1FX4'
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://imgur.com/qXBF4Xi.jpg',
+                        thumbnail_image_url='https://imgur.com/czohXnH.jpg',
                         title='this is menu2',
                         text='description2',
                         actions=[
