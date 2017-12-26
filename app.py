@@ -53,6 +53,14 @@ def handle_message(event):
         text_message = TextSendMessage(text='Coming soon')
         line_bot_api.reply_message(event.reply_token, text_message)
         return 0
+    if event.message.text == "R":
+        text_message = TextSendMessage(text='Viewlastseen')
+        line_bot_api.reply_message(event.reply_token, text_message)
+        return 0
+    if event.message.text == "Rs":
+        text_message = TextSendMessage(text='Setlastpoint')
+        line_bot_api.reply_message(event.reply_token, text_message)
+        return 0
     if event.message.text == "Dtbs Rangers":
         text_message = TextSendMessage(text='Coming soon')
         line_bot_api.reply_message(event.reply_token, text_message)
