@@ -138,7 +138,7 @@ def handle_message(event):
             template=ButtonsTemplate(
                 title='Gears Info',
                 text='Klik salah satu menu dibawah ini.',
-                thumbnail_image_url='https://imgur.com/U0jPa2S.jpg',
+                thumbnail_image_url='https://imgur.com/k54UZcw.jpg',
                 actions=[
                     URITemplateAction(
                         label='Gear Free/PVP/RAID',
