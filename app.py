@@ -49,6 +49,18 @@ def callback():
 def handle_message(event):
     print("event.reply_token:", event.reply_token)
     print("event.message.text:", event.message.text)
+    if event.message.text == "Jones":
+        quote = ('Udah takdir itu mah...','Yang barusan ngetik itu orangnya...')
+        jwbn = random.choice(quote)
+        text_message = TextSendMessage(text=jwbn)
+        line_bot_api.reply_message(event.reply_token, text_message)
+        return 0
+    elif "Apakah " in event.message.text:
+        quo = ('Iya','Tidak','Gak tau')
+        jwb = random.choice(quo)
+        text_message = TextSendMessage(text=jwbn)
+        line_bot_api.reply_message(event.reply_token, text_message)
+        return 0
     if event.message.text == "Advent Stage":
         text_message = TextSendMessage(text='Coming soon')
         line_bot_api.reply_message(event.reply_token, text_message)
