@@ -56,14 +56,9 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, text_message)
         return 0
     elif "Apakah " in event.message.text:
-        quote = ('Ya','Tidak')
+        quote = ('Ya','Tidak','Gak tau)
         jwbn = random.choice(quote)
         text_message = TextSendMessage(text=jwbn)
-        line_bot_api.reply_message(event.reply_token, text_message)
-        return 0
-    elif "Idl " in event.message.text:
-	cctxt = event.message.text.replace("Idl ","")
-        text_message = TextSendMessage(text=cctxt)
         line_bot_api.reply_message(event.reply_token, text_message)
         return 0
     if event.message.text == "Advent Stage":
