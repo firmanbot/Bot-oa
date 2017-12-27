@@ -63,7 +63,7 @@ def handle_message(event):
         return 0
     elif "Idl " in event.message.text:
 	cctxt = event.message.text.replace("Idl ","")
-        text_message = TextSendMessage(text=cctct)
+        text_message = TextSendMessage(text=cctxt)
         line_bot_api.reply_message(event.reply_token, text_message)
         return 0
     if event.message.text == "Advent Stage":
