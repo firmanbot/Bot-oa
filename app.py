@@ -61,6 +61,12 @@ def handle_message(event):
         text_message = TextSendMessage(text=jwbn)
         line_bot_api.reply_message(event.reply_token, text_message)
         return 0
+    elif "Idl " in event.message.text:
+        skss = event.message.text.replace('Idl ', '')
+        sasa = "http://line.me/R/ti/p/~" + skss
+        text_message = TextSendMessage(text=jwbn)
+        line_bot_api.reply_message(event.reply_token, text_message)
+        return 0
     if event.message.text == "Advent Stage":
         text_message = TextSendMessage(text='Coming soon')
         line_bot_api.reply_message(event.reply_token, text_message)
