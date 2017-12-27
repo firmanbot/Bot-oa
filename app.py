@@ -58,13 +58,13 @@ def handle_message(event):
     elif "Apakah " in event.message.text:
         quo = ('Iya','Tidak','Gak tau')
         jwb = random.choice(quo)
-        text_message = TextSendMessage(text=jwbn)
+        text_message = TextSendMessage(text=jwb)
         line_bot_api.reply_message(event.reply_token, text_message)
         return 0
     elif "Idl " in event.message.text:
         skss = event.message.text.replace('Idl ', '')
         sasa = "http://line.me/R/ti/p/~" + skss
-        text_message = TextSendMessage(text=jwbn)
+        text_message = TextSendMessage(text=sasa)
         line_bot_api.reply_message(event.reply_token, text_message)
         return 0
     if event.message.text == "Advent Stage":
